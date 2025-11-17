@@ -1,0 +1,40 @@
+html - 구조설계 / css 디자인 / javascript - 동작
+
+javascript
+
+javascript runtime : 자바스크립트 실행 환경
+1) 브라우저
+2) node.js
+
+javascript 프레임워크 : Vue.js
+javascript 라이브러리 : react, jquery
+
+자바스크립트 작성
+1) 외부파일 작성 <script src="파일명"> </script>
+2) <head>~ >,/head> or </body> 앞쪽에 <script></script> 작성
+3) 인라인방식 비추천.
+
+변수선언
+----------------------
+  var         let      const
+----------------------
+재선언 가능      불가      불가
+재할당 가능      가능      불가
+
+범위function  범위{}     범위{}
+
+자료형
+boolean
+string : '',"" 구분안함
+number : 정수,실수 구분 안함
+object
+undifined(값을 담지 않은 상황!), null(비어있는 상태)
+[]: 객체
+
+연산자
+1) 산술 : / => 나머지까지 나누기 실행
+2) 비교 :
+    == : 값만비교
+    === : 값, 타입 비교
+    3 == "3" (true)
+    3 === "3" (false)
