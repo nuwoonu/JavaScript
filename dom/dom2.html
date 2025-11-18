@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>시작</div>
+    <ul>
+        <li><b>항목</b></li>
+    </ul>
+    <div>끝</div>
+    <script>
+        // body 안의 모든 자식 요소들을 출력
+        //for (let i=0; i< document.body.childNodes.length; i++)
+        //{
+          //  console.log(document.body.childNodes[i]);
+        //}
+        console.log("노드",document.body.parentNode);
+        console.log("요소",document.body.parentElement);
+        console.log("퍼스트 차일드",document.body.firstChild);
+        console.log("퍼스트 요소 차일드",document.body.firstElementChild);
+        console.log("라스트차일드",document.body.lastChild);
+        console.log("라스트 요소 차일드",document.body.lastElementChild);
+        console.log("nextsibling", document.body.nextSibling);
+        console.log("nextelement sibling ", document.body.nextElementSibling);
+        console.log("previoussibling", document.body.previousSibling);
+        console.log("previous element sibling ", document.body.previousElementSibling);
+    </script>
+</body>
+</html>

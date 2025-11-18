@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button type="button">뒤로가기</button>
+        <button type="button">앞으로가기</button>
+        <button type="button">지정한 만큼</button>
+    </div>
+    <script>  
+        //document.getElementById("아이디 값"); // 아이다값이 일치하는 용소
+        //document.querySelector("css선택자 다된다."); // 첫번째 선택 조건에 만족하는 요소
+        //document.querySelectorAll(); //무조건 배열로 여러가져온다
+
+        // 뒤로가기 버튼 클릭 시 (이벤트))
+        // 이벤타 대상 요소 찾기 + 리스너(해야할 일 알고있는) 부착
+        //document.querySelectorAll("[tpye='button']");
+        //console.log(btns);
+        //console.log(bnts[0]);
+       // console.log(bnts[1]);
+       // console.log(bnts[2]); -->
+        btns[0].addEventListner("click",() =>
+        {
+            history.back();
+        });
+        btns[1].addEventListner("click",() =>
+        {
+            history.forward();
+        });
+        btns[2].addEventListner("click",() =>
+        {
+            history.go(-2);
+        });
+    </script>
+</body>
+</html>
