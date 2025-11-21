@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>input 변화감지</h1>
+    <form action="" method="get"> <!--폼 태그 안에 들어오는 요소들은 value로 가지고 오면된다.-->
+        <div>
+            
+            <label for="name">이름</label>
+            <input type="text" name="name", id="name">
+
+        </div>
+        <div>
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="addr">주소</label>
+            <input type="addr" name="addr" id="addr">
+        </div>
+    </form>
+    <script>
+        // nam 글자가 대문자라면 소문자로 변경
+        const name = document.getElementById("name"); //이벤트 대상요소 아이디 찾음.
+
+        const email = document.getElementById("email");
+
+        const addr = document.getElementById("addr");
+
+        // change : input 요소 내용 변경 후 포커스를 빼면 발생
+        name.addEventListener("change", (e) => {
+            console.log(e.target);
+            console.log(e.target.value);
+            console.log(name.value);
+            name.value = name.value.toLowerCase(); // 대문자 => 소문자 바꾸는데 밸류값 가지고와서 다시 name.value에 대입.
+            
+            // alert("name");
+        });
+        
+        // blur : 내용 변화와 상관없이 이벤트 발생
+        email.addEventListener("blur", (e)=> {
+            email.value = email.value.toLowerCase();
+            // alert("email");
+        });
+        
+        // input : 입력과 동시에 이벤트가 발생하여 적용된다.
+        addr.addEventListener("input", (e)=> {
+            addr.value = addr.value.toLowerCase();
+            
+        });
+    </script>
+</body>
+</html>
